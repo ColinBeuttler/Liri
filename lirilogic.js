@@ -1,4 +1,4 @@
-var Spotify = require('node-spotify-api');
+var Spotify = require('spotifyAPI');
  
 var spotify = new Spotify({
   id: "20f35dac25f143f1b881aadfddb797a5",
@@ -12,4 +12,16 @@ spotify
   })
   .catch(function(err) {
     console.error('Error occurred: ' + err); 
+  });
+  $(document).ready(function() {
+
+    $('form').submit(function(evt) {
+    
+        evt.preventDefault();
+    
+        var $searchField = $('#song');
+    
+        var spotifyApi = "https://api.spotify.com/v1/search" 
+
+    })
   });
